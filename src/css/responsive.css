@@ -1,0 +1,56 @@
+@media(min-width: 600px) and (orientation: landscape) {
+
+    :root {
+        --large-size: clamp(.8rem, .8rem + 1vw, 1rem);
+        --small-size: clamp(.4rem, .45rem + .5vw, .8rem);
+        --tiny-size: clamp(.35rem, .4rem + .4vw, .7rem);
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        border-radius: 12px;
+        max-width: clamp(30vw, 8rem + 30vw, 70vw);
+    }
+
+    .container .content {
+        gap: unset;
+        padding: 1rem;
+        max-inline-size: 100%;
+        justify-content: space-between;
+    }
+
+    .container .content h1 {
+        line-height: clamp(1rem, 1rem + 1vw, 2rem);
+    }
+
+    .container .content p {
+        line-height: clamp(.5rem, .5rem + 1.5vw, 1.5rem);
+    }
+}
+
+@media(min-width: 1200px) and (orientation: landscape) {
+
+    :root {
+        --large-size: clamp(1.75rem, 1.75rem + .7vh, 2rem);
+        --small-size: clamp(.6rem, .6rem + .7vh, 1rem);
+        --tiny-size: clamp(.5rem, .5rem + .7vh, .9rem);
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        border-radius: 12px;
+        max-width: 44vw;
+    }
+
+    .container .content {
+        padding: 2rem;
+    }
+
+    .container .content h1 {
+        line-height: clamp(1.5rem, 1.5rem + 1vw, 2rem);
+    }
+
+    .container .content p {
+        line-height: clamp(1rem, 1rem + 1vw, 1.5rem);
+    }
+}
